@@ -47,6 +47,7 @@ resource "aws_instance" "three" {
   key_name        = "munbai1"
   vpc_security_group_ids = [aws_security_group.five.id]
   availability_zone = "ap-southeast-1a"
+   user_data       = <<EOF
 #!/bin/bash
 sudo -i
 yum install httpd -y
@@ -65,6 +66,7 @@ resource "aws_instance" "four" {
   key_name        = "munbai1"
   vpc_security_group_ids = [aws_security_group.five.id]
   availability_zone = "ap-southeast-1b"
+ user_data       = <<EOF
 #!/bin/bash
 sudo -i
 yum install httpd -y
