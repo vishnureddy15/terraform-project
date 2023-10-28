@@ -25,7 +25,7 @@ EOF
 resource "aws_instance" "two" {
   ami             = "ami-06018068a18569ff2"
   instance_type   = "t2.micro"
-  key_name        = "swiggynewkeypairr"
+  key_name        = "mumbai"
   vpc_security_group_ids = [aws_security_group.five.id]
   availability_zone = "ap-southeast-1b"
   user_data       = <<EOF
@@ -44,7 +44,7 @@ EOF
 resource "aws_instance" "three" {
   ami             = "ami-06018068a18569ff2"
   instance_type   = "t2.micro"
-  key_name        = "swiggynewkeypairr"
+  key_name        = "mumbai"
   vpc_security_group_ids = [aws_security_group.five.id]
   availability_zone = "ap-southeast-1a"
   tags = {
