@@ -47,6 +47,13 @@ resource "aws_instance" "three" {
   key_name        = "munbai1"
   vpc_security_group_ids = [aws_security_group.five.id]
   availability_zone = "ap-southeast-1a"
+#!/bin/bash
+sudo -i
+yum install httpd -y
+systemctl start httpd
+chkconfig httpd on
+echo "Hey Siri! hai all this is my app created by terraform infrastructurte by raham sir server-3" > /var/www/html/index.html
+EOF
   tags = {
     Name = "app-server-1"
   }
@@ -58,6 +65,13 @@ resource "aws_instance" "four" {
   key_name        = "munbai1"
   vpc_security_group_ids = [aws_security_group.five.id]
   availability_zone = "ap-southeast-1b"
+#!/bin/bash
+sudo -i
+yum install httpd -y
+systemctl start httpd
+chkconfig httpd on
+echo "Hey Siri! hai all this is my app created by terraform infrastructurte by raham sir server-4" > /var/www/html/index.html
+EOF
   tags = {
     Name = "app-server-2"
   }
